@@ -9,9 +9,10 @@ else
   DEBFLAGS = -O2
 endif
 
+LDDINC=$(PWD)/../include
 
 EXTRA_CFLAGS += $(DEBFLAGS)
-ccflags-y += -I$(src)/../include
+EXTRA_CFLAGS += -I$(LDDINC)
 
 ifneq ($(KERNELRELEASE),)
 # call from kernel build system
